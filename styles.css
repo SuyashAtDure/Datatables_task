@@ -1,0 +1,8 @@
+/* .hello {
+    column-width: 10%;
+} */
+
+#myTable {
+    position: relative;
+    left: 50%;
+}
