@@ -11,3 +11,51 @@
     position: relative;
     left: 50%;
 }
+
+.custom_class {
+    .carousel-item img {
+      height: 370px;
+      position: relative;
+      left: 64px;
+      top: 10px;
+      width: 27rem;
+    }
+  }
+
+  .title {
+    text-align: start;
+    position: relative;
+    top: 1rem;
+  }
+
+  .brand {
+    text-align: start;
+  }
+
+  .description {
+    text-align: start;
+  }
+
+  .price {
+    position: relative;
+    right: 2rem;
+    top: 5rem;
+  }
+
+  #myTable3 {
+    position: relative;
+    left: 60rem;
+    top: 2rem;
+  }
+
+  #myTable4 {
+    position: relative;
+    left: 61rem;
+    top: 2rem;
+  }
+
+  /* #image_11 {
+    position: relative;
+    left: 100rem;
+  } */
+

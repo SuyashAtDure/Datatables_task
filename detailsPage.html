@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/jquery-datatables-checkboxes@1.2.13/css/dataTables.checkboxes.min.css" rel="stylesheet">
+    <style>
+        img{
+            width: 160px;
+        }
+    </style>
+</head>
+<body onload="loadData3()">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="card container" style="width:75rem; height: 27rem;position: relative;top: 1rem;">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-ride="carousel" style="width:35rem;position: relative;top: 1rem;">
+            <!-- <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div> -->
+            <div class="carousel-inner custom_class">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <div id="image_11" class="d-block w-100"></div>
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div> -->
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div id="image_12" class="d-block w-100"></div>
+                <!-- <img src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg" class="d-block w-100" alt="..."> -->
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div> -->
+              </div>
+              <div class="carousel-item">
+                <div id="image_13" class="d-block w-100"></div>
+                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" class="d-block w-100" alt="..."> -->
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div> -->
+              </div>
+              <div class="carousel-item">
+                <div id="image_14" class="d-block w-100"></div>
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div> -->
+              </div>
+              <div class="carousel-item">
+                <div id="image_15" class="d-block w-100"></div>
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div> -->
+              </div>
+            </div>
+            <button class="carousel-control-prev" role="button" href="#carouselExampleDark" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" role="button" href="#carouselExampleDark" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <div class="card-body container-fluid" style="position: absolute; left: 37rem; width: 35rem;">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <div>
+          <h4>
+
+          </h4>
+        </div>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      <!-- <div class="card mb-2 container" style="width: 75rem;position: relative;height: 25rem;top: 2rem;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" class="img-fluid rounded-start" style="position: absolute; left: 2rem; width: 35rem;" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <button class="btn btn-warning font-monospace" id="myTable3">Add to cart</button>
+      <button class="btn btn-danger font-monospace" id="myTable4">Buy now</button>
+    
+        
+
+    <script src="app3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-datatables-checkboxes@1.2.13/js/dataTables.checkboxes.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+<!-- <div class="container mt-3 mb-3" id="form_table">
+        <table class="table table-bordered table-light fw-medium font-monospace" id="flexCheck3"> 
+            <thead>
+              <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Details</th>
+                <th scope="col">Price</th> -->
+                
+                
+
+                <!-- <th scope="col">Image</th> -->
+              <!-- </tr>
+            </thead>
+            <tbody id="table_body3" class="table-group-divider">
+            </tbody> -->
+            <!-- <button class="btn btn-outline-danger font-monospace" id="myTable2">Remove Item</button> -->
+            <!-- <tfoot>
+              <th></th>
+              <th class="text-end">Total Price :</th>
+              <th id="t_price"></th>
+            </tfoot> -->
+          <!-- </table>
+        </div> -->
